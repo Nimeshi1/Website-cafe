@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>ADMIN PANEL</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+        
+
+ul {
+    list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #D071F9;
+}
+
+li {
+    float: left;
+ }
+
+li a {
+    display: block;
+    /* color: rgb(153, 18, 18); */
+    color: white;
+    ;
+    text-align: center;
+     padding: 14px 16px;
+    text-decoration: none;
+  }
+
+        body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1,h2{
+    color: #444;
+}
+h3{
+    color: #999;
+}
+.btn{
+    background: #f05462;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+.btn:hover{
+    color: #f05462;
+    background: white;
+    padding: 3px  8px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+.side-menu{
+    position: fixed;
+    background: #D071F9;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .brand-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.side-menu li{
+    font-size: 24px;
+    margin: 10px;
+    padding: 15px .40px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+.side-menu li:hover{
+    background: white;
+    color: #f05462;
+}
+.container{
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;;
+}
+.container .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav  .search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.container .header .nav  .search input[type=text]{
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+}
+.container .header .nav  .search button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .header .nav  .search button img{
+    width: 30px;
+    height: 30px;
+}
+.container .header .nav .user{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .header .nav .user img{
+    width: 40px;
+    height: 40px;
+}
+.container .header .nav .user .img-case{
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+}
+.container .header .nav .user .img-case img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .cards .card{
+    width: 250px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .content .content-2 .recent-payments{
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <center><h1>DASHBOARD</h1></center>
+        </div>
+        <ul>
+            <li><img src="dashbd/orders.png" alt=""><a href="order_details.php">Orders</a></li><br>
+            <li><img src="dashbd/food.png" alt=""><a href="admin.php">Manage items</a></li><br>
+            <li><img src="dashbd/register.png" alt="">&nbsp; <a href="customer_display.php">Customers</a></li><br>
+            <li><img src="dashbd/reservations.png" alt="">&nbsp;<a href="r_dis.php">Reservations</a></li><br>
+            <li><img src="dashbd/customers.png" alt="">&nbsp; <a href="contact_display.php">Contact Us</a></li><br>
+            <li><img src="dashbd/staff.png" alt=""><a href="home.php">Logout</a></li>
+
+            
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="dashbd/search.gif" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">ADD NEW</a>
+                    <img src="dashbd/notifications.gif" alt="">
+                    <div class="img-case">
+                        <img src="dashbd/user.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Staff</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="dashbd/employee.gif" alt="">
+                    </div>
+                </div>  
+                
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Customers</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="dashbd/employee.gif" alt="">
+                    </div>
+                </div>   
+            
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Operations</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="dashbd/employee.gif" alt="">
+                    </div>
+                </div>   
+            
+             
+            </div>
+            <div class="content-2">
+            <div class="recent-payments"></div>
+            
+        </div>
+            <div class="new-student"></div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
